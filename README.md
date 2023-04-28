@@ -1,7 +1,7 @@
 # test-task-softryzen-backend
 test-task-softryzen-backend
 
-https://test-task-softryzen-backend.onrender.com
+https://test-task-softryzen-backend.onrender.com - перший запит на бекенд відбувається до хвилини двох по часу, оскільки сервіс переводить його у стан очікування якщо довший час до нього не робити ніяких звернень.
 
 На сервері доступні такі роути щодо реєстрації та авторизації (колекція в БД "users"):
 
@@ -163,7 +163,7 @@ https://test-task-softryzen-backend.onrender.com
     з фронтенду приходить токен авторизації у хедері:
         - тип запиту DELETE
         - сервер повертає видалений фільм з повідомленням в JSON форматі:
-        
+
             {
                 "message": "Movie deleted",
                 "movie": {
