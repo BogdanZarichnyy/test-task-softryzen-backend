@@ -5,7 +5,7 @@ const getMyMovies = async (req, res) => {
     const { page = 1, limit = 16, query = '' } = req.query;
     const skip = (parseInt(page) - 1) * parseInt(limit);
 
-    const data = await Movie.find({ owner: _id, title: { $regex: new RegExp(query, '\di') } })
+    const data = await Movie.find({ owner: _id, title: { $regex: new RegExp(query, '\d\i') } })
         .populate('owner', 'username email')
         .sort({ createdAt: -1 })
         .skip(skip)
