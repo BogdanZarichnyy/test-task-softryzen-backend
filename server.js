@@ -7,6 +7,7 @@ const { MONGO_DB_HOST, PORT } = process.env;
 
 const start = async () => {
     try {
+        await mongoose.set("strictQuery", false);
         await mongoose.connect(MONGO_DB_HOST);
         console.log('Database connection successful');
 
