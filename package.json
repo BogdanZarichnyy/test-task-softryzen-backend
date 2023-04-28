@@ -1,0 +1,37 @@
+{
+  "name": "test-task-softryzen-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./server.js"
+  },
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "4.17.1",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.7.5",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  },
+  "description": "test-task-softryzen-backend",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogdanZarichnyy/test-task-softryzen-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BogdanZarichnyy/test-task-softryzen-backend/issues"
+  },
+  "homepage": "https://github.com/BogdanZarichnyy/test-task-softryzen-backend#readme"
+}
