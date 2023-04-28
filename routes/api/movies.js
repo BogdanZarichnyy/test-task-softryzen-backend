@@ -3,13 +3,15 @@ const express = require('express');
 const { userAuthenticate } = require('../../middlewares/authenticateMiddleware');
 const { addMyMovieValidation, updateMyMovieValidation } = require('../../middlewares/moviesValidationMiddleware');
 const controllerWrraper = require('../../helpers/controllerWrraper');
-const { getMyMovies, addMyMovie, updateMyMovieByID, deleteMyMovieByID } = require('../../controllers/movies');
+const { getMyMovies, getMyMovieById, addMyMovie, updateMyMovieByID, deleteMyMovieByID } = require('../../controllers/movies');
 
 const router = express.Router();
 
 router.use(userAuthenticate);
 
 router.get('/', controllerWrraper(getMyMovies));
+
+router.get('/:movieId', controllerWrraper(getMyMovieById));
 
 router.post('/', addMyMovieValidation, controllerWrraper(addMyMovie));
 
