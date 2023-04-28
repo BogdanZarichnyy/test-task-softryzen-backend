@@ -4,6 +4,7 @@ test-task-softryzen-backend
 https://test-task-softryzen-backend.onrender.com
 
 На сервері доступні такі роути щодо реєстрації та авторизації (колекція в БД "users"):
+
 ●	реєстрація по маршруту - https://test-task-softryzen-backend.onrender.com/api/users/registration
     з фронтенду приходять такі поля в JSON форматі:
         {
@@ -62,6 +63,7 @@ https://test-task-softryzen-backend.onrender.com
 
 
 На сервері доступні такі роути для роботи з фільмами (колекція в БД "movies"):
+
 ●	отримання всіх фільмів певного користувача з можливою пагінацією (параметри запиту page та limit) по маршруту - https://test-task-softryzen-backend.onrender.com/api/movies
     з фронтенду приходить токен авторизації у хедері:
         - тип запиту GET
