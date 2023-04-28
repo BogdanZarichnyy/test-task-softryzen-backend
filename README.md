@@ -7,13 +7,16 @@ https://test-task-softryzen-backend.onrender.com
 
 ●	реєстрація по маршруту - https://test-task-softryzen-backend.onrender.com/api/users/registration
     з фронтенду приходять такі поля в JSON форматі:
+
         {
             "username": "username",
             "email": "examle@email.com",
             "password" "..."
         }
+
         - тип запиту POST
         - сервер повертає новоствореного користувача в JSON форматі. В БД (Mongoose) у документі користувача для поля "accessToken" генерується токен авторизації:
+
             {
                 "user": {
                     "_id": "644bc887ce42cbd679b0b571",
@@ -23,14 +26,18 @@ https://test-task-softryzen-backend.onrender.com
                 }
             }
 
+
 ●	авторизація (логін) по маршруту - https://test-task-softryzen-backend.onrender.com/api/users/login
     з фронтенду приходят такі поля в JSON форматі:
+
         {
             "email": "examle@email.com",
             "password" "..."
         }
+
         - тип запиту POST
         - сервер повертає авторизованого користувача в JSON форматі. В БД (Mongoose) у документі користувача для поля "accessToken" генерується токен авторизації:
+
             {
                 "user": {
                     "_id": "644bc887ce42cbd679b0b571",
@@ -39,12 +46,14 @@ https://test-task-softryzen-backend.onrender.com
                     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGJjODg3Y2U0MmNiZDY3OWIwYjU3MSIsImlhdCI6MTY4MjY5MjEwNCwiZXhwIjoxNjgyNzc4NTA0fQ.y_vex1WLmRgKFmH6YbOPEzwJsmWvTY9mbHGPn-w7i3M"
                 }
             }
+
 
 ●	отримання актуального користувача (current) по маршруту - https://test-task-softryzen-backend.onrender.com/api/users/current
     з фронтенду приходить токен авторизації у хедері:
         - в хедерах (headers) у полі "authorization" вказується значення "accessToken" авторизованого користувача
         - тип запиту GET
         - сервер повертає поточного авторизованого користувача в JSON форматі:
+
             {
                 "user": {
                     "_id": "644bc887ce42cbd679b0b571",
@@ -53,6 +62,7 @@ https://test-task-softryzen-backend.onrender.com
                     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGJjODg3Y2U0MmNiZDY3OWIwYjU3MSIsImlhdCI6MTY4MjY5MjEwNCwiZXhwIjoxNjgyNzc4NTA0fQ.y_vex1WLmRgKFmH6YbOPEzwJsmWvTY9mbHGPn-w7i3M"
                 }
             }
+
 
 ●	вихід (logout) по маршруту - https://test-task-softryzen-backend.onrender.com/api/users/logout
     з фронтенду приходить токен авторизації у хедері:
@@ -75,6 +85,7 @@ https://test-task-softryzen-backend.onrender.com
         - тип запиту GET
         - приклад - https://test-task-softryzen-backend.onrender.com/api/movies/644bd006ce42cbd679b0b5ad
         - сервер повертає фільм в JSON форматі:
+
             {
                 "movie": {
                     "_id": "644bd006ce42cbd679b0b5ad",
@@ -91,15 +102,19 @@ https://test-task-softryzen-backend.onrender.com
                 }
             }
 
+
 ●	додавання фільму по маршруту - https://test-task-softryzen-backend.onrender.com/api/movies/
     з фронтенду приходить токен авторизації у хедері та дані для фільму з наступними полями в JSON форматі:
         - тип запиту POST
+
             {
                 "title": "Robocop 1",
                 "director": "Joi Smith",
                 "date": "27-04-2023",
             }
+
         - сервер повертає доданий фільм з повідомленням в JSON форматі:
+
             {
                 "message": "Created new movie",
                 "movie": {
@@ -113,15 +128,19 @@ https://test-task-softryzen-backend.onrender.com
                 }
             }
 
+
 ●	оновлення фільму за id по маршруту - https://test-task-softryzen-backend.onrender.com/api/movies/:movieId
     з фронтенду приходить токен авторизації у хедері та дані для фільму з наступними полями в JSON форматі:
         - тип запиту PUT
+
         {
             "title": "Robocop 12",
             "director": "Joi Smith Vilkerson",
             "date": "25-04-2023"
         }
+
         - сервер повертає оновлений фільм з повідомленням в JSON форматі:
+
             {
                 "message": "Updated movie",
                 "movie": {
@@ -139,10 +158,12 @@ https://test-task-softryzen-backend.onrender.com
                 }
             }
 
+
 ●	видалення фільму за id по маршруту - https://test-task-softryzen-backend.onrender.com/api/movies/:movieId
     з фронтенду приходить токен авторизації у хедері:
         - тип запиту DELETE
         - сервер повертає видалений фільм з повідомленням в JSON форматі:
+        
             {
                 "message": "Movie deleted",
                 "movie": {
