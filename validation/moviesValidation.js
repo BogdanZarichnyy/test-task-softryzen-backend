@@ -23,16 +23,16 @@ const updateMovieValidationSchema = Joi.object({
         .pattern(regExp.lettersAndDigitsRegExp)
         .min(2)
         .max(40)
-        .required(),
+        .optional(),
     director: Joi.string()
         .pattern(regExp.stringRegExp)
         .min(2)
         .max(40)
-        .required(),
+        .optional(),
     date: Joi.date()
         .format('DD-MM-YYYY')
         .utc()
-        .required(),
+        .optional(),
 });
 
 module.exports = {
